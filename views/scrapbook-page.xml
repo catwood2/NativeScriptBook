@@ -1,0 +1,14 @@
+<Page loaded="onLoaded">
+    <StackLayout>
+        <ListView items="{{ pages }}" itemTap="onItemTap"> //#A
+
+            <ListView.itemTemplate> //#B
+
+                <StackLayout>
+                    <Label text="{{ title, title + ' Scrapbook Page' }}" /> //#C
+
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>
