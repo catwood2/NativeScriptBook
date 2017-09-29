@@ -1,14 +1,19 @@
 <Page loaded="onLoaded">
-    <StackLayout>
-        <ListView items="{{ pages }}" itemTap="onItemTap"> //#A
+	<Page.actionBar> 
 
-            <ListView.itemTemplate> //#B
+		<ActionBar title="Pet Scrapbook">
 
-                <StackLayout>
-                    <Label text="{{ title, title + ' Scrapbook Page' }}" /> //#C
+			<ActionItem tap="onAddTap" ios.position="right" text="Add" android.position="actionBar"/> 
 
-                </StackLayout>
-            </ListView.itemTemplate>
-        </ListView>
-    </StackLayout>
+		</ActionBar>
+	</Page.actionBar>
+	<StackLayout>
+		<ListView items="{{ pages }}" itemTap="onItemTap">
+			<ListView.itemTemplate>
+				<StackLayout>
+					<Label text="{{ title, title + ' Scrapbook Page' }}" />
+				</StackLayout>
+			</ListView.itemTemplate>
+		</ListView>
+	</StackLayout>
 </Page>
